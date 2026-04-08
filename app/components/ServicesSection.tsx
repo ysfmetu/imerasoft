@@ -30,7 +30,7 @@ export default function ServicesSection() {
         </div>
 
         {/* First Row: Primary Services — Web & SEO */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "24px", marginBottom: "24px" }}>
+        <div className="services-grid-primary" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "24px", marginBottom: "24px" }}>
           {services.slice(0, 2).map((service, index) => (
             <div
               key={index}
@@ -77,7 +77,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Second Row: Secondary Services */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "16px" }}>
+        <div className="services-grid-secondary" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "16px" }}>
           {services.slice(2).map((service, index) => (
             <div
               key={index + 2}
@@ -129,6 +129,17 @@ export default function ServicesSection() {
           box-shadow: var(--shadow-md) !important;
           border-color: var(--border-light) !important;
           background: var(--bg-gray) !important;
+        }
+        @media (max-width: 600px) {
+          .services-grid-primary, .services-grid-secondary {
+            grid-template-columns: 1fr !important;
+          }
+          .service-card-primary {
+            padding: 28px 24px !important;
+          }
+          .service-card-secondary {
+            padding: 24px !important;
+          }
         }
       `}</style>
     </section>

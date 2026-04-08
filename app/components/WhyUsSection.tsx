@@ -64,6 +64,7 @@ export default function WhyUsSection() {
           {/* Right: CTA Card */}
           <div>
             <div
+              className="why-cta-card"
               style={{
                 background: "var(--bg-dark)",
                 borderRadius: "20px",
@@ -129,6 +130,18 @@ export default function WhyUsSection() {
           .why-us-grid {
             grid-template-columns: 1fr !important;
             gap: 48px !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .why-item {
+            padding: 24px 20px !important;
+            gap: 16px !important;
+          }
+          .why-cta-card {
+            padding: 32px 24px !important;
+          }
+          .why-cta-card h3 {
+            font-size: 1.5rem !important;
           }
         }
       `}</style>

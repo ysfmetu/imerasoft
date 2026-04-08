@@ -125,6 +125,16 @@ export default function ProcessSection() {
             display: none !important;
           }
         }
+        @media (max-width: 600px) {
+          .process-grid {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+          .process-step {
+            padding: 32px 24px !important;
+            min-height: auto !important;
+          }
+        }
       `}</style>
     </section>
   );

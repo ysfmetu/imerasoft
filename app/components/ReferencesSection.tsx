@@ -41,7 +41,7 @@ export default function ReferencesSection() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "32px", maxWidth: "1150px", margin: "0 auto" }}>
+        <div className="references-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "32px", maxWidth: "1150px", margin: "0 auto" }}>
           {references.map((ref) => {
             const iconData = iconMap[ref.id] || iconMap[1];
             return (
@@ -83,7 +83,7 @@ export default function ReferencesSection() {
                 </div>
 
                 {/* Card Content */}
-                <div style={{ padding: "32px 28px", flexGrow: 1, display: "flex", flexDirection: "column" }}>
+                <div className="reference-card-inner" style={{ padding: "32px 28px", flexGrow: 1, display: "flex", flexDirection: "column" }}>
                   <h3 style={{ fontSize: "1.25rem", color: "var(--text-main)", fontWeight: 800, marginBottom: "10px", letterSpacing: "-0.02em" }}>
                     {ref.title}
                   </h3>
@@ -98,11 +98,11 @@ export default function ReferencesSection() {
                       <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                     </svg>
                     {ref.isActive && ref.href ? (
-                      <a href={ref.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.875rem", color: "var(--orange-dark)", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: "3px" }}>
+                      <a href={ref.href} target="_blank" rel="noopener noreferrer" className="domain-text" style={{ fontSize: "0.875rem", color: "var(--orange-dark)", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: "3px" }}>
                         {ref.domain}
                       </a>
                     ) : (
-                      <p style={{ fontSize: "0.875rem", color: "var(--text-light)", fontWeight: 500, margin: 0 }}>
+                      <p className="domain-text" style={{ fontSize: "0.875rem", color: "var(--text-light)", fontWeight: 500, margin: 0 }}>
                         {ref.domain}
                       </p>
                     )}
@@ -173,6 +173,17 @@ export default function ReferencesSection() {
         }
         .reference-card:hover .btn-primary {
            background-color: var(--orange-dark);
+        }
+        @media (max-width: 600px) {
+          .references-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .reference-card-inner {
+            padding: 24px 20px !important;
+          }
+          .domain-text {
+            word-break: break-all;
+          }
         }
       `}</style>
     </section>

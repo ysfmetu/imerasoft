@@ -49,6 +49,8 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   body {
@@ -58,6 +60,8 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -276,4 +280,17 @@
       padding-bottom: 80px;
     }
   }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 16px; /* slightly smaller padding on very small devices */
+    }
+    .card-premium {
+      padding: 24px;
+    }
+    .card-clean {
+      padding: 24px;
+    }
+  }
 }
+

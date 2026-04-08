@@ -112,7 +112,9 @@ export default function Footer() {
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
               </div>
-              {contactInfo.email}
+              <span style={{ wordBreak: "break-all" }}>
+                {contactInfo.email}
+              </span>
             </a>
 
           </div>

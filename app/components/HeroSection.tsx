@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div style={{ position: "absolute", top: "-15%", right: "-5%", width: "800px", height: "800px", background: "radial-gradient(circle, rgba(249,115,22,0.03) 0%, rgba(255,255,255,0) 70%)", borderRadius: "50%", zIndex: 0 }} />
       <div style={{ position: "absolute", bottom: "-10%", left: "-10%", width: "600px", height: "600px", background: "radial-gradient(circle, rgba(22,163,74,0.03) 0%, rgba(255,255,255,0) 70%)", borderRadius: "50%", zIndex: 0 }} />
 
-      <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "120px", paddingBottom: "120px" }}>
+      <div className="container hero-container" style={{ position: "relative", zIndex: 1, paddingTop: "64px", paddingBottom: "96px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: "80px", alignItems: "center" }} className="hero-grid">
           
           {/* Left Content */}
@@ -70,7 +70,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Lead Form */}
-          <div className="card-premium" style={{ borderTop: "6px solid var(--orange)", padding: "48px 40px" }}>
+          <div className="card-premium card-premium-hero" style={{ borderTop: "6px solid var(--orange)", padding: "48px 40px" }}>
             {submitted ? (
               <div style={{ textAlign: "center", padding: "40px 0" }}>
                 <div style={{ width: "64px", height: "64px", background: "var(--green-light)", borderRadius: "50%", margin: "0 auto 24px", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -140,9 +140,21 @@ export default function HeroSection() {
 
       <style>{`
         @media (max-width: 900px) {
+          .hero-container {
+            padding-top: 40px !important;
+            padding-bottom: 64px !important;
+          }
           .hero-grid {
             grid-template-columns: 1fr !important;
             gap: 56px !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .card-premium-hero {
+            padding: 32px 24px !important;
+          }
+          .title-lg {
+            font-size: 2.5rem !important;
           }
         }
       `}</style>

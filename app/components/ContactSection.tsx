@@ -143,7 +143,7 @@ export default function ContactSection() {
                 <p style={{ fontSize: "0.8125rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "var(--text-light)", marginBottom: "4px" }}>
                   E-posta Adresimiz
                 </p>
-                <p style={{ fontSize: "1.375rem", fontWeight: 800, color: "var(--text-main)", letterSpacing: "-0.015em", lineHeight: 1.2 }}>
+                <p style={{ fontSize: "1.375rem", fontWeight: 800, color: "var(--text-main)", letterSpacing: "-0.015em", lineHeight: 1.2, wordBreak: "break-all" }}>
                   {contactInfo.email}
                 </p>
               </div>
@@ -180,14 +180,17 @@ export default function ContactSection() {
           .contact-grid > a:first-child {
             grid-column: 1 !important;
             flex-direction: column !important;
-            padding: 36px 28px !important;
-            gap: 24px !important;
+            padding: 32px 24px !important;
+            gap: 20px !important;
           }
           .contact-grid > a:first-child > div:last-child {
             display: none !important;
           }
           .whatsapp-hero-card h3 {
             font-size: 1.5rem !important;
+          }
+          .contact-info-card {
+            padding: 28px 24px !important;
           }
         }
       `}</style>

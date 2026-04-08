@@ -24,8 +24,8 @@ export default function TrustSection() {
           </p>
         </div>
 
-        {/* 4-column cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "24px" }}>
+        {/* Grid */}
+        <div className="trust-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "24px" }}>
           {trustCards.map((card, index) => (
             <div
               key={index}
@@ -79,6 +79,14 @@ export default function TrustSection() {
           border-color: var(--orange) !important;
           box-shadow: var(--shadow-lg) !important;
           transform: translateY(-3px);
+        }
+        @media (max-width: 600px) {
+          .trust-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .trust-card {
+            padding: 24px !important;
+          }
         }
       `}</style>
     </section>
