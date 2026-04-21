@@ -33,12 +33,21 @@ export const metadata: Metadata = {
     siteName: "Imerasoft",
     type: "website",
     locale: "tr_TR",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Imerasoft Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Imerasoft – Web Tasarım, SEO ve Kurumsal Yazılım Çözümleri",
     description:
       "Modern web siteleri, SEO ve özel yazılım çözümleriyle işletmenizi dijitalde güçlendiriyoruz.",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
