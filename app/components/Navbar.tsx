@@ -26,17 +26,24 @@ export default function Navbar() {
       }}
     >
       <div className="container">
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "88px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: "88px", padding: "8px 0" }}>
           
           {/* Logo */}
-          <a href="#" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <div style={{ width: "36px", height: "36px", background: "var(--orange)", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 6px rgba(249, 115, 22, 0.2)" }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-            </div>
-            <span style={{ fontSize: "1.375rem", fontWeight: 800, color: "var(--text-main)", letterSpacing: "-0.02em" }}>
-              Imera<span style={{ color: "var(--orange)" }}>soft</span>
+          <a href="#" style={{ display: "flex", flexDirection: "column", alignItems: "center", textDecoration: "none" }}>
+            <img 
+              src="/logo.png" 
+              alt="Imerasoft Logo" 
+              style={{ height: "68px", width: "auto", objectFit: "contain" }} 
+            />
+            <span style={{ 
+              fontSize: "0.75rem", 
+              fontWeight: 600, 
+              color: "var(--orange)", 
+              letterSpacing: "0.03em",
+              marginTop: "-6px",
+              fontStyle: "italic"
+            }}>
+              Yeni Günün Çözümü
             </span>
           </a>
 

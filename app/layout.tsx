@@ -48,6 +48,9 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  icons: {
+    icon: "/logo.png",
+  },
   alternates: {
     canonical: "https://imerasoft.com",
   },
