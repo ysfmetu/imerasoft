@@ -26,38 +26,82 @@ export default function Navbar() {
       }}
     >
       <div className="container">
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: "88px", padding: "8px 0" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: "76px", padding: "0" }}>
           
-          {/* Logo */}
-          <a href="#" style={{ display: "flex", flexDirection: "column", alignItems: "center", textDecoration: "none" }}>
-            <img 
-              src="/logo.png" 
-              alt="Imerasoft Logo" 
-              style={{ height: "68px", width: "auto", objectFit: "contain" }} 
-            />
-            <span style={{ 
-              fontSize: "0.75rem", 
-              fontWeight: 600, 
-              color: "var(--orange)", 
-              letterSpacing: "0.03em",
-              marginTop: "-6px",
-              fontStyle: "italic"
+          {/* Logo — locked block, flex-shrink:0 so it always dominates */}
+          <a
+            href="#"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              textDecoration: "none",
+              flexShrink: 0,
+              gap: "3px",
+            }}
+          >
+            {/* Icon + Wordmark Row */}
+            <div style={{ display: "flex", alignItems: "center", gap: "11px" }}>
+              {/* SVG Icon */}
+              <svg width="34" height="40" viewBox="0 0 38 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{ flexShrink: 0 }}>
+                <rect x="0" y="0" width="14" height="6" rx="1" fill="#FF5F00"/>
+                <rect x="0" y="0" width="6" height="14" rx="1" fill="#FF5F00"/>
+                <rect x="24" y="0" width="14" height="6" rx="1" fill="#FF5F00"/>
+                <rect x="32" y="0" width="6" height="14" rx="1" fill="#FF5F00"/>
+                <rect x="15" y="10" width="8" height="24" rx="2" fill="#FF5F00"/>
+                <rect x="0" y="38" width="14" height="6" rx="1" fill="#E04E00"/>
+                <rect x="0" y="30" width="6" height="14" rx="1" fill="#E04E00"/>
+                <rect x="24" y="38" width="14" height="6" rx="1" fill="#E04E00"/>
+                <rect x="32" y="30" width="6" height="14" rx="1" fill="#E04E00"/>
+              </svg>
+
+              {/* Wordmark */}
+              <div style={{ display: "flex", alignItems: "baseline", lineHeight: 1 }}>
+                <span style={{
+                  fontSize: "1.875rem",
+                  fontWeight: 800,
+                  color: "#0D1B2E",
+                  letterSpacing: "-0.04em",
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
+                  lineHeight: 1,
+                }}>Imera</span>
+                <span style={{
+                  fontSize: "1.875rem",
+                  fontWeight: 800,
+                  color: "#FF5F00",
+                  letterSpacing: "-0.04em",
+                  fontFamily: "var(--font-inter), Inter, sans-serif",
+                  lineHeight: 1,
+                }}>soft</span>
+              </div>
+            </div>
+
+            {/* Slogan — indented to align under wordmark */}
+            <span style={{
+              fontSize: "0.625rem",
+              fontWeight: 500,
+              color: "#8A97B0",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              paddingLeft: "45px",
+              lineHeight: 1,
             }}>
               Yeni Günün Çözümü
             </span>
           </a>
 
           {/* Nav Links - Desktop */}
-          <nav style={{ display: "flex", gap: "32px" }} className="desktop-nav">
+          <nav style={{ display: "flex", gap: "24px", alignItems: "center" }} className="desktop-nav">
             {navLinks.map((link) => (
               <a 
                 key={link.href} 
                 href={link.href}
                 style={{
-                  color: "var(--text-main)",
+                  color: "var(--text-secondary, #4B5563)",
                   fontWeight: 600,
-                  fontSize: "0.9375rem",
-                  transition: "color 0.2s ease"
+                  fontSize: "0.875rem",
+                  transition: "color 0.2s ease",
+                  whiteSpace: "nowrap",
                 }}
               >
                 {link.label}
@@ -66,11 +110,11 @@ export default function Navbar() {
           </nav>
 
           {/* Contact CTAs - Right */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }} className="desktop-nav">
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }} className="desktop-nav">
             <a
               href={contactInfo.phoneHref}
               className="btn btn-outline"
-              style={{ padding: "10px 20px", fontSize: "0.875rem", fontWeight: 700 }}
+              style={{ padding: "8px 16px", fontSize: "0.8125rem", fontWeight: 700 }}
             >
               Ara: {contactInfo.phone}
             </a>
@@ -79,14 +123,14 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-green"
-              style={{ padding: "10px 20px", fontSize: "0.875rem" }}
+              style={{ padding: "8px 16px", fontSize: "0.8125rem" }}
             >
               WhatsApp
             </a>
             <a
               href="#iletisim"
               className="btn btn-primary"
-              style={{ padding: "10px 20px", fontSize: "0.875rem" }}
+              style={{ padding: "8px 18px", fontSize: "0.8125rem" }}
             >
               Teklif Al
             </a>
