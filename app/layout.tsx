@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     images: [
       {
-        url: "/logo.png",
-        width: 800,
-        height: 600,
-        alt: "Imerasoft Logo",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Imerasoft – Web Tasarım, SEO ve Yazılım Çözümleri",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Imerasoft – Web Tasarım, SEO ve Kurumsal Yazılım Çözümleri",
     description:
       "Modern web siteleri, SEO ve özel yazılım çözümleriyle işletmenizi dijitalde güçlendiriyoruz.",
-    images: ["/logo.png"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
