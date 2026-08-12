@@ -19,6 +19,15 @@ export const references = [
     isActive: true,
   },
   {
+    id: 6,
+    title: "BS60 Yapı",
+    category: "Kurumsal Web Sitesi & İnşaat",
+    description: "BS60 Yapı olarak köy evlerinden villalara, ahır yapılarından istinat duvarlarına, temelden anahtar teslim daire projelerine kadar geniş kapsamlı inşaat hizmetleri sunuyoruz.",
+    domain: "bs60yapi.com",
+    href: "https://www.bs60yapi.com",
+    isActive: true,
+  },
+  {
     id: 2,
     title: "Demsa Makina",
     category: "B2B Katalog & Web",
